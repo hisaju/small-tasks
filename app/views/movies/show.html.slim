@@ -1,0 +1,19 @@
+.card
+  .card-header
+    h3.card-title 映画詳細
+    .card-tools
+      = link_to '編集', edit_movie_path(@movie), class: 'btn btn-sm btn-outline-primary mr-2'
+      = link_to '一覧へ戻る', movies_path, class: 'btn btn-sm btn-outline-secondary'
+  .card-body
+    table.table.table-bordered
+      tbody
+        tr
+          th = Movie.human_attribute_name(:id)
+          td = @movie.id
+        tr
+          th = Movie.human_attribute_name(:title)
+          td = @movie.title
+        tr
+          th = Movie.human_attribute_name(:description)
+          td = @movie.description
+      

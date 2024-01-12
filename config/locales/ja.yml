@@ -9,11 +9,16 @@ ja:
   activerecord:
     models:
       book: 書籍
+      movie: 映画
     attributes:
       book:
         id: ID
         title: タイトル
         author: 著者
         isbn: ISBN
+        description: 説明
+      movie:
+        id: ID
+        title: タイトル
         description: 説明
 
