@@ -1,0 +1,21 @@
+.card
+  .card-header
+    h3.card-title 映画一覧
+    .card-tools
+      = link_to '新規登録', new_movie_path, class: 'btn btn-sm btn-outline-primary'
+  .card-body
+    table.table.table-bordered
+      thead
+        tr
+          th = Movie.human_attribute_name(:id)
+          th = Movie.human_attribute_name(:title)
+          th
+      tbody
+        - @movies.each do |movie|
+          tr
+            td = movie.id
+            td = movie.title
+            td
+              = link_to '詳細', movie, class: 'btn btn-sm btn-outline-secondary mr-2'
+              = link_to '編集', edit_movie_path(movie), class: 'btn btn-sm btn-outline-primary mr-2'
+              = link_to '削除', movie, data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか？' }, class: 'btn btn-sm btn-outline-danger'
