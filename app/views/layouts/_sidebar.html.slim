@@ -1,0 +1,14 @@
+aside.main-sidebar.sidebar-dark-primary.elevation-4
+  = link_to root_path, class: 'brand-link' do
+    span.brand-text.font-weight-light Small Tasks
+  .sidebar
+    nav.mt-2
+      ul.nav.nav-pills.nav-sidebar.flex-column data-widget="treeview" role="menu" data-accordion="false"
+        li.nav-item
+          = link_to root_path, class: 'nav-link' do
+            i.nav-icon.fas.fa-tachometer-alt
+            p Dashboard
+        li.nav-item
+          = link_to books_path, class: 'nav-link' do
+            i.nav-icon.fas.fa-book
+            p 書籍

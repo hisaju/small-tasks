@@ -1,0 +1,25 @@
+.card
+  .card-header
+    h3.card-title 書籍詳細
+    .card-tools
+      = link_to '編集', edit_book_path(@book), class: 'btn btn-sm btn-outline-primary mr-2'
+      = link_to '一覧へ戻る', books_path, class: 'btn btn-sm btn-outline-secondary'
+  .card-body
+    table.table.table-bordered
+      tbody
+        tr
+          th = Book.human_attribute_name(:id)
+          td = @book.id
+        tr
+          th = Book.human_attribute_name(:title)
+          td = @book.title
+        tr
+          th = Book.human_attribute_name(:author)
+          td = @book.author
+        tr
+          th = Book.human_attribute_name(:isbn)
+          td = @book.isbn
+        tr
+          th = Book.human_attribute_name(:description)
+          td = @book.description
+      
